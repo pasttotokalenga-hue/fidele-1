@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center p-6 m-4 hover:bg-[#009687] rounded-2xl cursor-pointer">
+  <!-- Circle image -->
+  <div class="w-32 h-32 rounded-full border-4 border-[#009687] overflow-hidden flex items-center justify-center bg-gray-100 p-2">
+  <img [src]="category?.image_url" 
+       [alt]="category?.name" 
+       class="object-cover w-full h-full rounded-full" />
+</div>
+
+
+  <!-- Label -->
+  <h6 class="mt-4 text-lg font-semibold text-gray-800">
+    {{ category?.name }}
+  </h6>
+</div>

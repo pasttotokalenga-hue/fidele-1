@@ -1,0 +1,14 @@
+🎨 Palette moderne (Flat Design)
+Bleu primaire : #009687
+
+Vert secondaire : #2ECC71
+
+Orange accent : #E67E22
+
+Rouge alerte : #E74C3C
+
+Gris neutre : #95A5A6
+
+Noir texte : #2C3E50
+
+Blanc fond : #FFFFFF

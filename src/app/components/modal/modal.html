@@ -1,0 +1,54 @@
+<div class="flex flex-col md:flex-row bg-white p-6">
+
+  <!-- Image -->
+  <div class="flex justify-center items-center md:w-1/2 bg-[#f6f6f5] p-6">
+    <img src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" ["
+         alt="product" 
+         class="w-full rounded-lg shadow-lg">
+  </div>
+
+  <!-- Infos produit -->
+  <div class="flex flex-col md:w-1/2 p-6">
+
+    <h1 class="text-3xl font-bold mb-4">HIKING RAIN PONCHO 50 - 10 L TURQUOISE</h1>
+
+    <!-- Stars -->
+    <div class="flex justify-center space-x-1 mb-4">
+      <!-- SVG stars (idem ton code) -->
+    </div>
+
+    <!-- Prix -->
+    <p class="text-3xl font-bold mb-4">41.78 USD</p>
+
+    <!-- Taille / Couleur -->
+    <p class="text-lg font-medium mb-4">Color: Green-D | Size: XL</p>
+
+    <!-- Quantité -->
+    <div class="flex justify-center space-x-4 mb-4">
+      <p class="text-xl">Qté</p>
+      <button (click)="incrementQte()" 
+              class="bg-white text-black text-xl px-3 py-1 rounded-lg hover:bg-[#009687] hover:text-black">+</button>
+      <p class="text-2xl">{{qteNumber}}</p>
+      <button (click)="decrementQte()" 
+              class="bg-white text-black text-xl px-3 py-1 rounded-lg hover:bg-[#009687] hover:text-black">-</button>
+    </div>
+
+    <!-- Paiement -->
+    <div class="flex flex-col">
+      <select id="payment" name="payment"
+              class="bg-[#f6f6f5] text-lg text-black p-3 rounded-lg mb-4 disabled:bg-gray-500"
+              [disabled]="qteNumber===0"
+              [(ngModel)]="selectedOption">
+        <option value="">Choisir un mode de paiement</option>
+        <option value="credit">Orange money</option>
+        <option value="debit">Carte Visa</option>
+      </select>
+
+      <button class="bg-[#009687] w-full rounded-lg p-3 text-2xl text-white hover:bg-green-500 disabled:bg-gray-500"
+              [disabled]="!selectedOption">
+        Acheter
+      </button>
+    </div>
+
+  </div>
+</div>

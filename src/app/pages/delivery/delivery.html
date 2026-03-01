@@ -1,0 +1,62 @@
+<!-- tracking.component.html -->
+<div class="w-screen mt-10 p-30 mx-auto bg-white shadow rounded-lg">
+  <!-- Header -->
+  <h2 class="text-2xl font-bold text-gray-800 mb-6">
+    Suivi de livraison
+  </h2>
+
+  <!-- Input -->
+  <div class="flex items-center gap-2 mb-8">
+    <input
+      type="text"
+      placeholder="Entrez votre numéro de suivi"
+      class="flex-1 px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
+    />
+    <button
+      class="px-4 py-2 bg-[#009687] text-white rounded-lg hover:bg-[#16554f] transition"
+    >
+      Rechercher
+    </button>
+  </div>
+
+  <!-- Package Info -->
+  <div class="mb-8">
+    <p class="text-gray-700"><span class="font-semibold">Commande :</span> #123456</p>
+    <p class="text-gray-700"><span class="font-semibold">Transporteur :</span> DHL</p>
+    <p class="text-gray-700"><span class="font-semibold">Date estimée :</span> 05/03/2026</p>
+  </div>
+
+  <!-- Timeline with truck -->
+  <div class="relative">
+    <!-- Line -->
+    <div class="absolute top-5 left-0 w-full h-1 bg-gray-200"></div>
+
+    <!-- Steps -->
+    <div class="flex justify-between items-center relative z-10">
+      <div class="flex flex-col items-center">
+        <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white">✓</div>
+        <p class="mt-2 text-sm font-semibold">Confirmée</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white">✓</div>
+        <p class="mt-2 text-sm font-semibold">Expédiée</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center text-white">•</div>
+        <p class="mt-2 text-sm font-semibold">Transit</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-white">•</div>
+        <p class="mt-2 text-sm font-semibold">Livrée</p>
+      </div>
+    </div>
+
+    <!-- Truck icon -->
+    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 transition-all duration-500">
+      <!-- Camion SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M3 13V6a1 1 0 011-1h10v8h-2a3 3 0 00-6 0H3zm12-7h3l3 4v3h-6V6zm-7 9a1 1 0 110 2 1 1 0 010-2zm10 0a1 1 0 110 2 1 1 0 010-2z"/>
+      </svg>
+    </div>
+  </div>
+</div>

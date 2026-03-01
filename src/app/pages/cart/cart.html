@@ -1,0 +1,402 @@
+<div class="mt-20 flex flex-col h-screen bg-[#f6f6f5]">
+  <!-- Cart Summary (fixed at top) -->
+  <div class="bg-white p-4 shadow-md">
+    <p class="font-bold text-2xl text-right">Sous-total: $122.34</p>
+    <p class="text-2xl text-gray-600 text-right">Sans la TVA et autres taxes !!</p>
+    <div class="flex justify-end space-x-4 mt-4">
+
+      <a routerLink="">
+      <button class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 cursor-pointer">
+        Continuer le shopping
+      </button>
+      </a>
+
+      <button 
+      class="px-4 py-2 bg-[#009687] text-white rounded hover:bg-[#2c615c] cursor-pointer"
+      (click)="summonProduct()"
+      >
+        Confirmer la commande
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Items (scrollable below summary) -->
+  <div class="flex-1 overflow-y-auto p-6 space-y-4">
+    <!-- Example cart item -->
+
+
+  
+<div class="flex h-30 items-center justify-between bg-white rounded-lg shadow-md p-4 mb-4">
+  <!-- Product Info -->
+  <div class="flex items-center space-x-4">
+    <!-- Image -->
+    <img 
+      src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" 
+      alt="Pain de mie" 
+      class="w-20 h-20 rounded-md object-cover"
+    />
+
+    <!-- Texts -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800">Pain de mie</h3>
+      <p class="text-sm text-gray-500">SK</p>
+    </div>
+  </div>
+
+  <!-- Quantity & Price -->
+  <div class="flex items-center space-x-6">
+    <!-- Quantity Selector -->
+
+
+    <div class="flex h-11 items-center rounded-3xl bg-[#EAEAEA]">
+     <div class="flex p-2 items-center space-x-4">
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="6" height="2" viewBox="0 0 6 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.15909 -2.81334e-05V1.47156H0V-2.81334e-05H5.15909Z" fill="black"/>
+</svg>
+
+  </button>
+  <span class="py-1 text-black font-bold">100</span>
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.07385 7.68183V1.62125e-05H4.60226V7.68183H3.07385ZM-1.10865e-05 4.60229V3.07388H7.68181V4.60229H-1.10865e-05Z" fill="black"/>
+</svg>
+
+  </button>
+</div>
+
+    </div>
+
+    <!-- Price -->
+    <p class="text-lg font-bold text-gray-800">900 000 Fc</p>
+
+    <!-- Trash Icon -->
+    <button class="text-red-500 hover:bg-[#FACDCA]">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           fill="none" 
+           viewBox="0 0 24 24" 
+           stroke="currentColor" 
+           class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7h6m-2-3h-2m-2 3h6" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+<div class="flex h-30 items-center justify-between bg-white rounded-lg shadow-md p-4 mb-4">
+  <!-- Product Info -->
+  <div class="flex items-center space-x-4">
+    <!-- Image -->
+    <img 
+      src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" 
+      alt="Pain de mie" 
+      class="w-20 h-20 rounded-md object-cover"
+    />
+
+    <!-- Texts -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800">Pain de mie</h3>
+      <p class="text-sm text-gray-500">SK</p>
+    </div>
+  </div>
+
+  <!-- Quantity & Price -->
+  <div class="flex items-center space-x-6">
+    <!-- Quantity Selector -->
+
+
+    <div class="flex h-11 items-center rounded-3xl bg-[#EAEAEA]">
+     <div class="flex p-2 items-center space-x-4">
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="6" height="2" viewBox="0 0 6 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.15909 -2.81334e-05V1.47156H0V-2.81334e-05H5.15909Z" fill="black"/>
+</svg>
+
+  </button>
+  <span class="py-1 text-black font-bold">100</span>
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.07385 7.68183V1.62125e-05H4.60226V7.68183H3.07385ZM-1.10865e-05 4.60229V3.07388H7.68181V4.60229H-1.10865e-05Z" fill="black"/>
+</svg>
+
+  </button>
+</div>
+
+    </div>
+
+    <!-- Price -->
+    <p class="text-lg font-bold text-gray-800">900 000 Fc</p>
+
+    <!-- Trash Icon -->
+    <button class="text-red-500 hover:bg-[#FACDCA]">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           fill="none" 
+           viewBox="0 0 24 24" 
+           stroke="currentColor" 
+           class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7h6m-2-3h-2m-2 3h6" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<div class="flex h-30 items-center justify-between bg-white rounded-lg shadow-md p-4 mb-4">
+  <!-- Product Info -->
+  <div class="flex items-center space-x-4">
+    <!-- Image -->
+    <img 
+      src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" 
+      alt="Pain de mie" 
+      class="w-20 h-20 rounded-md object-cover"
+    />
+
+    <!-- Texts -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800">Pain de mie</h3>
+      <p class="text-sm text-gray-500">SK</p>
+    </div>
+  </div>
+
+  <!-- Quantity & Price -->
+  <div class="flex items-center space-x-6">
+    <!-- Quantity Selector -->
+
+
+    <div class="flex h-11 items-center rounded-3xl bg-[#EAEAEA]">
+     <div class="flex p-2 items-center space-x-4">
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="6" height="2" viewBox="0 0 6 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.15909 -2.81334e-05V1.47156H0V-2.81334e-05H5.15909Z" fill="black"/>
+</svg>
+
+  </button>
+  <span class="py-1 text-black font-bold">100</span>
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.07385 7.68183V1.62125e-05H4.60226V7.68183H3.07385ZM-1.10865e-05 4.60229V3.07388H7.68181V4.60229H-1.10865e-05Z" fill="black"/>
+</svg>
+
+  </button>
+</div>
+
+    </div>
+
+    <!-- Price -->
+    <p class="text-lg font-bold text-gray-800">900 000 Fc</p>
+
+    <!-- Trash Icon -->
+    <button class="text-red-500 hover:bg-[#FACDCA]">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           fill="none" 
+           viewBox="0 0 24 24" 
+           stroke="currentColor" 
+           class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7h6m-2-3h-2m-2 3h6" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<div class="flex h-30 items-center justify-between bg-white rounded-lg shadow-md p-4 mb-4">
+  <!-- Product Info -->
+  <div class="flex items-center space-x-4">
+    <!-- Image -->
+    <img 
+      src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" 
+      alt="Pain de mie" 
+      class="w-20 h-20 rounded-md object-cover"
+    />
+
+    <!-- Texts -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800">Pain de mie</h3>
+      <p class="text-sm text-gray-500">SK</p>
+    </div>
+  </div>
+
+  <!-- Quantity & Price -->
+  <div class="flex items-center space-x-6">
+    <!-- Quantity Selector -->
+
+
+    <div class="flex h-11 items-center rounded-3xl bg-[#EAEAEA]">
+     <div class="flex p-2 items-center space-x-4">
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="6" height="2" viewBox="0 0 6 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.15909 -2.81334e-05V1.47156H0V-2.81334e-05H5.15909Z" fill="black"/>
+</svg>
+
+  </button>
+  <span class="py-1 text-black font-bold">100</span>
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.07385 7.68183V1.62125e-05H4.60226V7.68183H3.07385ZM-1.10865e-05 4.60229V3.07388H7.68181V4.60229H-1.10865e-05Z" fill="black"/>
+</svg>
+
+  </button>
+</div>
+
+    </div>
+
+    <!-- Price -->
+    <p class="text-lg font-bold text-gray-800">900 000 Fc</p>
+
+    <!-- Trash Icon -->
+    <button class="text-red-500 hover:bg-[#FACDCA]">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           fill="none" 
+           viewBox="0 0 24 24" 
+           stroke="currentColor" 
+           class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7h6m-2-3h-2m-2 3h6" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<div class="flex h-30 items-center justify-between bg-white rounded-lg shadow-md p-4 mb-4">
+  <!-- Product Info -->
+  <div class="flex items-center space-x-4">
+    <!-- Image -->
+    <img 
+      src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" 
+      alt="Pain de mie" 
+      class="w-20 h-20 rounded-md object-cover"
+    />
+
+    <!-- Texts -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800">Pain de mie</h3>
+      <p class="text-sm text-gray-500">SK</p>
+    </div>
+  </div>
+
+  <!-- Quantity & Price -->
+  <div class="flex items-center space-x-6">
+    <!-- Quantity Selector -->
+
+
+    <div class="flex h-11 items-center rounded-3xl bg-[#EAEAEA]">
+     <div class="flex p-2 items-center space-x-4">
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="6" height="2" viewBox="0 0 6 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.15909 -2.81334e-05V1.47156H0V-2.81334e-05H5.15909Z" fill="black"/>
+</svg>
+
+  </button>
+  <span class="py-1 text-black font-bold">100</span>
+  <button class="w-8 h-8 flex items-center justify-center text-gray-600 bg-white rounded-full hover:bg-[#009687]">
+    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.07385 7.68183V1.62125e-05H4.60226V7.68183H3.07385ZM-1.10865e-05 4.60229V3.07388H7.68181V4.60229H-1.10865e-05Z" fill="black"/>
+</svg>
+
+  </button>
+</div>
+
+    </div>
+
+    <!-- Price -->
+    <p class="text-lg font-bold text-gray-800">900 000 Fc</p>
+
+    <!-- Trash Icon -->
+    <button class="text-red-500 hover:bg-[#FACDCA]">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           fill="none" 
+           viewBox="0 0 24 24" 
+           stroke="currentColor" 
+           class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7h6m-2-3h-2m-2 3h6" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @if (showProduct) {
+  <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div class="shadow-lg rounded-lg p-6 w-270 relative">
+      
+     <app-modal></app-modal>
+
+      <!-- Close button -->
+      <button 
+        (click)="closeProduct()" 
+        class="absolute top-2 right-2 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 cursor-pointer">
+        ✕
+      </button>
+    </div>
+  </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
