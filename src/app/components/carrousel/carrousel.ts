@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy, Input } from '@angular/core';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-carrousel',
@@ -6,6 +7,10 @@ import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@ang
   styleUrls: ['./carrousel.css']
 })
 export class CarrouselComponent implements AfterViewInit, OnDestroy {
+
+
+
+
   @ViewChild('carousel') carousel!: ElementRef<HTMLDivElement>;
   private index: number = 0;
   private intervalId: any;

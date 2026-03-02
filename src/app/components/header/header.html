@@ -14,16 +14,43 @@
            <nav class="space-x-8">
   <ul class="flex flex-row space-x-8 text-base">
     <!-- Cart Icon -->
-    <li>
-      <a routerLink="cart" class="hover:bg-[#009687] hover:text-black p-4 rounded-lg flex items-center">
-        <!-- Shopping Cart Icon -->
-        <img 
-    src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" 
-    alt="menu icon" 
-    class="h-8 w-8"
-  />
-      </a>
-    </li>
+    
+
+<li>
+  <a 
+    routerLink="cart" 
+    class="hover:bg-[#009687] hover:text-black p-4 rounded-lg flex items-center relative"
+  >
+    <!-- Shopping Cart Icon -->
+    <img 
+      src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" 
+      alt="menu icon" 
+      class="h-8 w-8"
+    />
+
+    <!-- Badge using Angular @if -->
+    
+      <span 
+        class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center"
+      >
+        5
+      </span>
+    
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Truck Icon -->
     <li>

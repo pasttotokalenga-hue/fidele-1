@@ -6,6 +6,9 @@ import { CategoryCard } from '../../components/category-card/category-card';
 import { ProductService } from '../../services/product.service';
 import { CategoryService } from '../../services/category.service';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../interfaces/product';
+import { Category } from '../../interfaces/category';
+import { error } from 'console';
 
 @Component({
   selector: 'app-home',
@@ -17,8 +20,10 @@ export class Home implements OnInit {
   private productService = inject(ProductService);
   private categoryService = inject(CategoryService);
 
-  products = signal<any[]>([]);
-  categories = signal<any[]>([]);
+  products = signal<Product[]>([]);
+  categories = signal<Category[]>([]);
+  loading = signal<boolean>(false);
+
 
   minValue = 200;
   maxValue = 800;
@@ -27,21 +32,44 @@ export class Home implements OnInit {
   isDesktop = false;
 
   ngOnInit() {
+
     if (typeof window !== 'undefined') {
       this.isDesktop = window.innerWidth >= 768;
       this.isAsideOpen = this.isDesktop; 
     }
+
     this.loadData();
+
+
+
+
+
+
   }
 
   loadData() {
-    this.productService.getProducts().subscribe(products => {
+  this.loading.set(true);
+
+  this.productService.getProducts().subscribe({
+    next: products => {
       this.products.set(products);
-    });
-    this.categoryService.getCategories().subscribe(categories => {
+      this.loading.set(false);
+    },
+    error: () => this.loading.set(false)
+  });
+
+  this.categoryService.getCategories().subscribe({
+    next: categories => {
       this.categories.set(categories);
-    });
-  }
+    }
+  });
+}
+
+
+
+
+
+
 
   toggleAside() {
     this.isAsideOpen = !this.isAsideOpen;
