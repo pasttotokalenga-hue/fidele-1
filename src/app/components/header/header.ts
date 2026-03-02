@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
+import { StateManagement } from '../../state/state-management';
+import { Product } from '../../interfaces/product';
 
 
 @Component({
@@ -11,6 +13,17 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.css',
 })
 export class Header {
+
+  constructor( private basketState : StateManagement){}
+  
+
+  basketStates() : Product[] {
+
+    return this.basketState.basketStates();
+
+  }
+
+
   authService = inject(AuthService);
   
   dropdownOpen = false;

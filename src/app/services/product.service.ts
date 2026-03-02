@@ -7,8 +7,9 @@ import { Product } from '../interfaces/product';
   providedIn: 'root'
 })
 export class ProductService {
-  private http = inject(HttpClient);
-  private apiUrl = '/api/products';
+  
+  constructor(private http : HttpClient){}
+  private apiUrl = 'http://10.252.252.32:8000/api/products';
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);

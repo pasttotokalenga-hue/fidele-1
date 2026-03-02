@@ -1,7 +1,7 @@
 <header class="fixed top-0 left-0 right-0 h-20 bg-[#f6f6f5] flex justify-between items-center z-50">
     
         <div class="flex flex-row space-x-10 mx-3 ">
-            <a routerLink='' class="cursor-pointer"><img src="zando+_logo.png" alt="logo" class="w-30 h-auto cursor-pointer" ></a>
+            <a routerLink='' class="cursor-pointer"><img src="zando+_logo.png" alt="logo" class=" m-4 p-2 cursor-pointer h-20 w-20 " ></a>
             
         </div>
 
@@ -25,16 +25,23 @@
     <img 
       src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" 
       alt="menu icon" 
-      class="h-8 w-8"
+      class="h-10 w-10"
     />
 
     <!-- Badge using Angular @if -->
     
-      <span 
-        class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center"
+    @if(basketStates().length == 0){
+
+    }  @else {
+
+       <span 
+        class="absolute top-2 right-2 bg-[#009687] text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center"
       >
-        5
+        {{basketStates().length}}
       </span>
+
+    }
+   
     
   </a>
 </li>

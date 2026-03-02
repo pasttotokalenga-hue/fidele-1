@@ -7,9 +7,11 @@ import { User } from '../interfaces/user';
   providedIn: 'root'
 })
 export class UserService {
-  private http = inject(HttpClient);
-  private apiUrl = '/api/users';
 
+  private apiUrl = 'http://10.252.252.32:8000/api/users';
+
+  constructor(private http :HttpClient){}
+  
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl);
   }

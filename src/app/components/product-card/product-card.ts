@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../../interfaces/product';
+import { StateManagement } from '../../state/state-management';
 
 @Component({
   selector: 'app-product-card',
@@ -8,16 +9,15 @@ import { Product } from '../../interfaces/product';
   styleUrl: './product-card.css',
 })
 export class ProductCard {
+
+  constructor(private basketService : StateManagement){}
+
   @Input() product!: Product;
 
   basket: Product[] = [];
 
 addToBasket(product : Product){
-
-  this.basket.push(product);
-
-  console.log(this.basket);
-
+  this.basketService.addToBasket(product)
 }
   
 }

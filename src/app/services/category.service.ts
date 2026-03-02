@@ -7,8 +7,10 @@ import { Category } from '../interfaces/category';
   providedIn: 'root'
 })
 export class CategoryService {
-  private http = inject(HttpClient);
-  private apiUrl = '/api/categories';
+
+  private apiUrl = 'http://10.252.252.32:8000/api/categories';
+
+  constructor( private http : HttpClient){}
 
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(this.apiUrl);

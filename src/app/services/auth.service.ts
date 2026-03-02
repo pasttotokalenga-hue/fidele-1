@@ -6,12 +6,12 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private http = inject(HttpClient);
-  private apiUrl = '/api/login';
+ 
+  private apiUrl = 'http://10.252.252.32:8000/api/login';
 
   currentUser = signal<any>(null);
 
-  constructor() {
+  constructor(private http : HttpClient) {
     if (typeof window !== 'undefined') {
       const savedUser = localStorage.getItem('user');
       if (savedUser) {

@@ -1,6 +1,7 @@
 export interface Category {
     id: number;
     name: String;
+    description:String;
     image_url: String;
 }
 
